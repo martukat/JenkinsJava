@@ -41,6 +41,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.martam.webspring</groupId>
+			<artifactId>dto</artifactId>
+			<version>1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.martam.webspring</groupId>
+			<artifactId>models</artifactId>
+			<version>1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
