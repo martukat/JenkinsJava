@@ -44,7 +44,7 @@
 
 		<dependency>
 			<groupId>com.martam.webspring</groupId>
-			<artifactId>dto</artifactId>
+			<artifactId>dtos</artifactId>
 			<version>1</version>
 		</dependency>
 		<dependency>
