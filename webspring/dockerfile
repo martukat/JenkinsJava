@@ -1,0 +1,8 @@
+# imagen limpia que se quiere usar
+FROM openjdk:17-jdk-alpine
+# comando que copia la app dentro de la imagen
+COPY target/webspring-1.jar webspring-1.jar
+# ejecutará dentro de la imagen la app
+ENTRYPOINT ["java","-jar","/webspring-1.jar"]
+# expone el puerto
+EXPOSE 8088
