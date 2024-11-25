@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.martam</groupId>
 	<artifactId>webspring</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>webspring</name>
 	<description>Web spring project for Spring Boot</description>
 	<url />
