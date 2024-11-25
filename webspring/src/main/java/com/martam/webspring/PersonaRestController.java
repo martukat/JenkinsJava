@@ -7,19 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.martam.webspring.dtos.PersonaDto;
+import com.martam.webspring.mapper.PersonaMapper;
+
 @RestController
 @RequestMapping("/personas")
 public class PersonaRestController {
-	
+
 	@Autowired
 	private PersonaRepository repositorio;
 
 	/**
 	 * @param persona
-	 * @see com.martam.webspring.PersonaRepository#add(com.martam.webspring.Persona)
+	 * @see com.martam.webspring.PersonaRepository#add(com.martam.webspring.models.Persona)
 	 */
-	public void add(Persona persona) {
-		repositorio.add(persona);
+	public void add(PersonaDto personaDto) {
+		repositorio.add(PersonaMapper.toBusinessObject(personaDto));
 	}
 
 	/**
@@ -27,9 +30,8 @@ public class PersonaRestController {
 	 * @see com.martam.webspring.PersonaRepository#buscarTodos()
 	 */
 	@GetMapping
-	public List<Persona> buscarTodos() {
-		return repositorio.buscarTodos();
+	public List<PersonaDto> buscarTodos() {
+		return repositorio.buscarTodos().stream().map((p) -> new PersonaDto(p.getNombre())).toList();
 	}
-	
 
 }

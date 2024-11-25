@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.martam.webspring.models.Persona;
+
 @Service
 public class PersonaService {
 	
@@ -13,7 +15,7 @@ public class PersonaService {
 
 	/**
 	 * @param persona
-	 * @see com.martam.webspring.PersonaRepository#add(com.martam.webspring.Persona)
+	 * @see com.martam.webspring.PersonaRepository#add(com.martam.webspring.models.Persona)
 	 */
 	public void add(Persona persona) {
 		repositorio.add(persona);
